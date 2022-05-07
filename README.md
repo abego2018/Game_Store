@@ -12,3 +12,4 @@ Your app can:
 -Use an API to fetch data and display information in your React app
 -Integrate testing (Snapshot, TDD) if you feel that your React app is simple
 -Integrate React Redux to manage state and data instead of props and Context
+# reactSpa
