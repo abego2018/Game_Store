@@ -9,18 +9,17 @@ export default function header() {
         <Navbar>
             <Container>
                 <Navbar.Brand href="#home">
-                <Card style={{ width: '100%', backgroundImage: "url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg)", height: "70px", backgroundRepeat: "no-repeat", backgroundPosition: "right", backgroundColor: "black", backgroundSize: "80px 50px" }}>
-                <Card.Title style={{ textAlign: "middle", width: "100px", marginLeft: "1300px", marginTop: "20px" }}>Game Cart</Card.Title>
-                                <Card.Subtitle className="mb-2 text-muted">Delivery • Pickup</Card.Subtitle>
-                            </Card>
-                </Navbar.Brand>
-                <Navbar.Toggle />
-                <Navbar.Collapse className="justify-content-end">
-                    <Nav.Link>
+                <Card style={{ width: '100%', backgroundImage: "url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg)", height: "70px", backgroundRepeat: "no-repeat", color:'red', backgroundPosition: "right", backgroundColor: "black", backgroundSize: "80px 50px" }}>
+                <Card.Title style={{ textAlign: "middle", width: "100px", marginLeft: "1300px", marginTop: "20px" }}>Game Cart
+                                {/* <Card.Subtitle className="mb-2 text-muted">Delivery • Pickup</Card.Subtitle> */}
+                                <Nav.Link>
                         <Button variant="light">Log in</Button>
                         <Button variant="success">Sign up</Button>
-                    </Nav.Link>
-                </Navbar.Collapse>
+                    </Nav.Link></Card.Title>
+                            </Card>
+                </Navbar.Brand>
+                
+                
             </Container>
         </Navbar>
     )
