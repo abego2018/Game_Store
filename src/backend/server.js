@@ -1,24 +1,24 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-// const PORT = process.env.PORT;
-// const MONGO_URI = process.env.MONGO_URI;
+const cors = require('cors');
 
 require("dotenv").config(); 
-//Middleware(order is important!)
-app.use(express.json()); 
-// app.use(cors())
-
-const gameController = require('./controllers/gameController');
-app.use('/', gameController);
-app.get('/', (req, res) => {
-
-res.send('Home Page');
-
-})
 
 // Connect to mongodb
-mongoose.connect('mongodb://localhost:27017', ()=> console.log('db connected'), { useNewUrlParser: true,useUnifiedTopology: true}
+mongoose.connect('mongodb://localhost:27017/GameApp', ()=> console.log('db connected'), { useNewUrlParser: true,useUnifiedTopology: true}
 );
+
+//Middleware(order is important!)
+app.use(express.json()); 
+
+//-------------Find out if we need middleware below------------------
+app.use(cors())
+// app.set('views', __dirname + '/views');
+// app.set('view engine', 'jsx');
+// app.engine('jsx', require('express-react-views').createEngine());
+
+const gameController = require('./controllers/gameController');
+app.use('/app', gameController);
 
 app.listen(3000, () => console.log("Server is running"));
