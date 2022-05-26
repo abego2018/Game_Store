@@ -21,4 +21,5 @@ app.use(cors())
 const gameController = require('./controllers/gameController');
 app.use('/app', gameController);
 
-app.listen(3000, () => console.log("Server is running"));
+//Local host port in server needs to be different from front end.
+app.listen(3001, () => console.log("Server is running"));
